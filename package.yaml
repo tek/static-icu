@@ -1,0 +1,25 @@
+name: static-icu
+version: 0.1.0.0
+synopsis: static exe with icu
+description: static exe with icu
+license: OtherLicense
+license-file: LICENSE
+author: "Torsten Schmits"
+maintainer: "tek@tryp.io"
+copyright: "2019 Torsten Schmits"
+category: Debug
+build-type: Simple
+
+dependencies:
+- base >= 4.7 && < 5
+- text-icu
+- reflex-vty
+
+executables:
+ static-icu:
+  main: Main.hs
+  source-dirs: app
+  ghc-options:
+  - -threaded
+  - -rtsopts
+  - -with-rtsopts=-N
